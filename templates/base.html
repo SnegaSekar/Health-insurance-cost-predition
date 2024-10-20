@@ -1,0 +1,53 @@
+
+<!-- templates/base.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}HEALTH INSURANCE COST PREDICTION{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">HEALTH INSURANCE COST PREDICTION</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/dataset">Dataset</a></li>
+                <li class="nav-item"><a class="nav-link" href="/predict">Predict</a></li>
+                <li class="nav-item"><a class="nav-link" href="/visualization">Visualization</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+<style>
+    /* static/styles.css */
+body {
+    background-image: url('../static/img.png'); /* Adjust the path if your image is in a different location */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+    body{
+    font-family: 'Pacifico', cursive;
+	<!--font-family: Arial, Helvetica,sans-serif;-->
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+</style>
+</body>
+</html>

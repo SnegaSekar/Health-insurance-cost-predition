@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block title %}Predict{% endblock %}
+
+{% block content %}
+<div style="color:black;" class="container">
+    <h2 class='container-heading'><span class="heading_font">Medical Insurance Cost Predictor</span></h2>
+</div>
+
+<div style="color:black;" class="ml-container">
+    <form action="{{ url_for('predicts') }}" method="POST">
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input id="age" name="age" placeholder="in year" required="required">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required="required">
+                <option value="None">Select Gender</option>
+                <option value="sex_male">Male</option>
+                <option value="sex_female">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="smoker">Smoker</label>
+            <select id="smoker" name="smoker" required="required">
+                <option value="None">Select Smoker</option>
+                <option value="smoker_yes">Yes</option>
+                <option value="smoker_no">No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="alcoholic">Alcoholic</label>
+            <select id="alcoholic" name="alcoholic" required="required">
+                <option value="None">Select Alcoholic</option>
+                <option value="smoker_yes">Yes</option>
+                <option value="smoker_no">No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="diabetes">Diabetes</label>
+            <select id="diabetes" name="diabetes" required="required">
+                <option value="None">Select Diabetes</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="bmi">Body Mass Index</label>
+            <input id="bmi" name="bmi" placeholder="BMI" required="required">
+        </div>
+        <div class="form-group">
+            <label for="children">Number of Children</label>
+            <input id="children" name="children" placeholder="0, 1, 2, 3, 4, 5" required="required">
+        </div>
+        <div class="form-group">
+            <label for="region">Region</label>
+            <select id="region" name="region" required="required">
+                <option value="None">Select Region</option>
+                <option value="region_northwest">North-West</option>
+                <option value="region_southeast">South-East</option>
+                <option value="region_southwest">South-West</option>
+                <option value="region_northeast">North-East</option>
+            </select>
+        </div>
+        <button id="sub" type="submit">Submit</button>
+    </form>
+</div>
+
+<style>
+/* Background Image */
+body {
+    background-image: url("https://www.acko.com/wp-content/uploads/2020/01/cashless-health-insurance.jpg.webp");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* General Styling */
+.container-heading {
+    color: black;
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ml-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 18px;
+    flex-basis: 40%;
+    text-align: left;
+}
+
+input, select {
+    border-radius: 10px;
+    height: 30px;
+    width: 55%;
+    font-size: 16px;
+    padding: 0 10px;
+    text-align: left;
+}
+
+#sub {
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#sub:hover {
+    background-color: #0056b3;
+}
+
+</style>
+{% endblock %}

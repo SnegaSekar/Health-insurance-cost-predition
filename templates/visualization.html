@@ -1,0 +1,27 @@
+<!-- templates/visualization.html -->
+{% extends "base.html" %}
+
+{% block title %}Visualization{% endblock %}
+
+{% block content %}
+<center>
+    <h1>VISUALIZATION</h1>
+</center><br><br>
+
+<div>
+    <h2>A person who smoke and have BMI above 30 tends to have a higher medical cost
+</h2>
+    <img src="{{ url_for('static', filename='images/bmi.png') }}" alt="A person who smoke and have BMI above 30 tends to have a higher medical cost
+"><br><br>
+</div><br><br><br>
+<div class="container">
+     <h2>Scatter plot of the charges paid v/s age and smoker.</h2>
+    <img src="{{ url_for('static', filename='images/age.png') }}" alt="A person who smoke and have BMI above 30 tends to have a higher medical cost
+"><br><br>
+</div>
+<div>
+    <h2>Dependencies of Medical charges</h2>
+    <img src="{{ url_for('static', filename='images/heatmap.png') }}" alt="A person who smoke and have BMI above 30 tends to have a higher medical cost
+"><br><br>
+</div><br><br><br>
+{% endblock %}

@@ -1,0 +1,62 @@
+/* static/styles.css */
+
+/* Background Image */
+body {
+    background-image: url("background.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-heading {
+    margin: 0;
+}
+
+.heading_font {
+    color: black;
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+#first, #second, #third, #third1, #fourth, #fifth, #sixth {
+    border-radius: 14px;
+    height: 25px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#second, #third, #third1, #sixth {
+    width: 140px;
+}
+
+#fourth {
+    width: 80px;
+}
+
+#fifth {
+    width: 160px;
+}
+
+/* Submit Button */
+#sub {
+    width: 120px;
+    height: 43px;
+    text-align: center;
+    border-radius: 14px;
+    font-size: 18px;
+}

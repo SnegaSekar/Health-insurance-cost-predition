@@ -1,0 +1,51 @@
+
+
+<!-- templates/home.html-->
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div style="color:blue;" class="container1">
+    <h2 class='container-heading'><span class="heading_font">Medical Insurance Cost Predictor</span></h2>
+</div>
+ <div class="container">
+        <div class="left-box">
+            <h2>Overview</h2>
+            <p>The rising costs of healthcare have made accurate predictions of health insurance costs increasingly important for both providers and consumers. This project focuses on developing a predictive model for health insurance costs using a variety of demographic, lifestyle, and health-related variables. Leveraging machine learning techniques, we analyze data from a diverse population to identify key factors that influence insurance premiums. Our approach includes data preprocessing, feature selection, and the application of regression models to estimate costs.</p>
+            <p>The model is validated and optimized to ensure accuracy and reliability. The results offer valuable insights for insurers to design more equitable pricing strategies and for consumers to understand the factors affecting their insurance costs. This website aims to contribute to the broader goal of making healthcare more affordable and accessible.</p>
+        </div>
+    </div>
+
+<style>
+        /* Container for the box */
+        .container {
+            display: flex;
+            justify-content: flex-start; /* Aligns the box to the left */
+            align-items: center; /* Centers the box vertically */
+            height: 100vh; /* Full viewport height */
+            padding-left: 50px; /* Adds some space from the left edge */
+        }
+
+        /* Box styles */
+        .left-box {
+            border: 2px solid #003366; /* Blue border */
+            padding: 20px;
+            max-width: 600px; /* Maximum width for the box */
+            background-color: #f4f4f4; /* Light background color */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border-radius: 15px; /* Smooth corners */
+        }
+
+        .left-box h2 {
+            margin: 0 0 15px 0;
+            color: #3498db; /* Text color matching border */
+        }
+
+        .left-box p {
+            margin: 0;
+            color: #333;
+            line-height: 1.6; /* Improves readability */
+        }
+    </style>
+    {% endblock %}
